@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Swift 中的属性标记（Attribute）--更新中... | 流光不加少</title>
+    <meta name="generator" content="VuePress 1.9.10">
+    
+    <meta name="description" content="『懒拭宝剑锋，流光不加少』">
+    
+    <link rel="preload" href="/assets/css/0.styles.8b21b8c6.css" as="style"><link rel="preload" href="/assets/js/app.e1332c6f.js" as="script"><link rel="preload" href="/assets/js/7.63dda24d.js" as="script"><link rel="preload" href="/assets/js/2.4e3082d4.js" as="script"><link rel="preload" href="/assets/js/1.19caefda.js" as="script"><link rel="preload" href="/assets/js/49.58dabd69.js" as="script"><link rel="prefetch" href="/assets/js/10.3049d5fe.js"><link rel="prefetch" href="/assets/js/11.311b165e.js"><link rel="prefetch" href="/assets/js/15.3531b668.js"><link rel="prefetch" href="/assets/js/16.442b9ae6.js"><link rel="prefetch" href="/assets/js/17.ff64f756.js"><link rel="prefetch" href="/assets/js/18.e11ff39a.js"><link rel="prefetch" href="/assets/js/19.dd8eb796.js"><link rel="prefetch" href="/assets/js/20.510db0c8.js"><link rel="prefetch" href="/assets/js/21.b5181ba0.js"><link rel="prefetch" href="/assets/js/22.c2800a61.js"><link rel="prefetch" href="/assets/js/23.6fdb1c33.js"><link rel="prefetch" href="/assets/js/24.2ee647ad.js"><link rel="prefetch" href="/assets/js/25.1a1931ac.js"><link rel="prefetch" href="/assets/js/26.71d290ad.js"><link rel="prefetch" href="/assets/js/27.55791907.js"><link rel="prefetch" href="/assets/js/28.d31d6564.js"><link rel="prefetch" href="/assets/js/29.b3cc37a4.js"><link rel="prefetch" href="/assets/js/3.1890c0af.js"><link rel="prefetch" href="/assets/js/30.a11008d2.js"><link rel="prefetch" href="/assets/js/31.a19b3366.js"><link rel="prefetch" href="/assets/js/32.7d23a2e4.js"><link rel="prefetch" href="/assets/js/33.39f7ef57.js"><link rel="prefetch" href="/assets/js/34.7d2bcae8.js"><link rel="prefetch" href="/assets/js/35.24bdd8c8.js"><link rel="prefetch" href="/assets/js/36.02d0e20f.js"><link rel="prefetch" href="/assets/js/37.7455a7b7.js"><link rel="prefetch" href="/assets/js/38.fe6e0f92.js"><link rel="prefetch" href="/assets/js/39.7303d94e.js"><link rel="prefetch" href="/assets/js/4.fefdbce7.js"><link rel="prefetch" href="/assets/js/40.7b0ec3f8.js"><link rel="prefetch" href="/assets/js/41.82d42a6c.js"><link rel="prefetch" href="/assets/js/42.3b1a2f71.js"><link rel="prefetch" href="/assets/js/43.821ff429.js"><link rel="prefetch" href="/assets/js/44.b11f55c7.js"><link rel="prefetch" href="/assets/js/45.5c12e29e.js"><link rel="prefetch" href="/assets/js/46.60a61b4e.js"><link rel="prefetch" href="/assets/js/47.555397e8.js"><link rel="prefetch" href="/assets/js/48.83d386aa.js"><link rel="prefetch" href="/assets/js/5.af3d2f32.js"><link rel="prefetch" href="/assets/js/50.ae27c4a6.js"><link rel="prefetch" href="/assets/js/51.8396ff62.js"><link rel="prefetch" href="/assets/js/52.372771b7.js"><link rel="prefetch" href="/assets/js/53.0254393a.js"><link rel="prefetch" href="/assets/js/54.3ef9957d.js"><link rel="prefetch" href="/assets/js/55.da7881ac.js"><link rel="prefetch" href="/assets/js/56.ccfb8133.js"><link rel="prefetch" href="/assets/js/57.c52b81e4.js"><link rel="prefetch" href="/assets/js/6.85087531.js"><link rel="prefetch" href="/assets/js/8.b6577bf5.js"><link rel="prefetch" href="/assets/js/9.06ceb3f0.js"><link rel="prefetch" href="/assets/js/vendors~docsearch.b4382b61.js"><link rel="prefetch" href="/assets/js/vuejs-paginate.df1ca1a8.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.8b21b8c6.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container no-sidebar" data-v-7dd95ae2><div data-v-7dd95ae2><div class="password-shadow password-wrapper-out" style="display:none;" data-v-59e6cb88 data-v-7dd95ae2 data-v-7dd95ae2><h3 class="title" data-v-59e6cb88>流光不加少</h3> <p class="description" data-v-59e6cb88>『懒拭宝剑锋，流光不加少』</p> <label id="box" class="inputBox" data-v-59e6cb88><input type="password" value="" data-v-59e6cb88> <span data-v-59e6cb88>Konck! Knock!</span> <button data-v-59e6cb88>OK</button></label> <div class="footer" data-v-59e6cb88><span data-v-59e6cb88><i class="iconfont reco-theme" data-v-59e6cb88></i> <a target="blank" href="https://vuepress-theme-reco.recoluan.com" data-v-59e6cb88>vuePress-theme-reco</a></span> <span data-v-59e6cb88><i class="iconfont reco-copyright" data-v-59e6cb88></i> <a data-v-59e6cb88><!---->
+          
+        <span data-v-59e6cb88>2013 - </span>
+        2025
+      </a></span></div></div> <div class="hide" data-v-7dd95ae2><header class="navbar" data-v-7dd95ae2><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">流光不加少</span></a> <div class="links"><div class="color-picker"><a class="color-button"><i class="iconfont reco-color"></i></a> <div class="color-picker-menu" style="display:none;"><div class="mode-options"><h4 class="title">Choose mode</h4> <ul class="color-mode-options"><li class="dark">dark</li><li class="auto active">auto</li><li class="light">light</li></ul></div></div></div> <div class="search-box"><i class="iconfont reco-search"></i> <input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/" class="nav-link"><i class="iconfont reco-home"></i>
+  Home
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont reco-category"></i>
+      Category
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/categories/Daily/" class="nav-link"><i class="undefined"></i>
+  Daily
+</a></li><li class="dropdown-item"><!----> <a href="/categories/Note/" class="nav-link"><i class="undefined"></i>
+  Note
+</a></li><li class="dropdown-item"><!----> <a href="/categories/玩具/" class="nav-link"><i class="undefined"></i>
+  玩具
+</a></li><li class="dropdown-item"><!----> <a href="/categories/笔记/" class="nav-link"><i class="undefined"></i>
+  笔记
+</a></li><li class="dropdown-item"><!----> <a href="/categories/iOS/" class="nav-link"><i class="undefined"></i>
+  iOS
+</a></li><li class="dropdown-item"><!----> <a href="/categories/App/" class="nav-link"><i class="undefined"></i>
+  App
+</a></li><li class="dropdown-item"><!----> <a href="/categories/Server/" class="nav-link"><i class="undefined"></i>
+  Server
+</a></li><li class="dropdown-item"><!----> <a href="/categories/记事/" class="nav-link"><i class="undefined"></i>
+  记事
+</a></li></ul></div></div><div class="nav-item"><a href="/tag/" class="nav-link"><i class="iconfont reco-tag"></i>
+  Tag
+</a></div><div class="nav-item"><a href="/timeline/" class="nav-link"><i class="iconfont reco-date"></i>
+  TimeLine
+</a></div><div class="nav-item"><a href="/about/" class="nav-link"><i class="iconfont reco-account"></i>
+  About
+</a></div><div class="nav-item"><a href="https://github.com/HyanCat" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="iconfont reco-github"></i>
+  GitHub
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <!----></nav></div></header> <div class="sidebar-mask" data-v-7dd95ae2></div> <aside class="sidebar" data-v-7dd95ae2><div class="personal-info-wrapper" data-v-1fad0c41 data-v-7dd95ae2><!----> <!----> <div class="num" data-v-1fad0c41><div data-v-1fad0c41><h3 data-v-1fad0c41>13</h3> <h6 data-v-1fad0c41>Articles</h6></div> <div data-v-1fad0c41><h3 data-v-1fad0c41>13</h3> <h6 data-v-1fad0c41>Tags</h6></div></div> <ul class="social-links" data-v-1fad0c41></ul> <hr data-v-1fad0c41></div> <nav class="nav-links"><div class="nav-item"><a href="/" class="nav-link"><i class="iconfont reco-home"></i>
+  Home
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont reco-category"></i>
+      Category
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/categories/Daily/" class="nav-link"><i class="undefined"></i>
+  Daily
+</a></li><li class="dropdown-item"><!----> <a href="/categories/Note/" class="nav-link"><i class="undefined"></i>
+  Note
+</a></li><li class="dropdown-item"><!----> <a href="/categories/玩具/" class="nav-link"><i class="undefined"></i>
+  玩具
+</a></li><li class="dropdown-item"><!----> <a href="/categories/笔记/" class="nav-link"><i class="undefined"></i>
+  笔记
+</a></li><li class="dropdown-item"><!----> <a href="/categories/iOS/" class="nav-link"><i class="undefined"></i>
+  iOS
+</a></li><li class="dropdown-item"><!----> <a href="/categories/App/" class="nav-link"><i class="undefined"></i>
+  App
+</a></li><li class="dropdown-item"><!----> <a href="/categories/Server/" class="nav-link"><i class="undefined"></i>
+  Server
+</a></li><li class="dropdown-item"><!----> <a href="/categories/记事/" class="nav-link"><i class="undefined"></i>
+  记事
+</a></li></ul></div></div><div class="nav-item"><a href="/tag/" class="nav-link"><i class="iconfont reco-tag"></i>
+  Tag
+</a></div><div class="nav-item"><a href="/timeline/" class="nav-link"><i class="iconfont reco-date"></i>
+  TimeLine
+</a></div><div class="nav-item"><a href="/about/" class="nav-link"><i class="iconfont reco-account"></i>
+  About
+</a></div><div class="nav-item"><a href="https://github.com/HyanCat" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="iconfont reco-github"></i>
+  GitHub
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <!----></nav> <!----> </aside> <div class="password-shadow password-wrapper-in" style="display:none;" data-v-59e6cb88 data-v-7dd95ae2><h3 class="title" data-v-59e6cb88>Swift 中的属性标记（Attribute）--更新中...</h3> <!----> <label id="box" class="inputBox" data-v-59e6cb88><input type="password" value="" data-v-59e6cb88> <span data-v-59e6cb88>Konck! Knock!</span> <button data-v-59e6cb88>OK</button></label> <div class="footer" data-v-59e6cb88><span data-v-59e6cb88><i class="iconfont reco-theme" data-v-59e6cb88></i> <a target="blank" href="https://vuepress-theme-reco.recoluan.com" data-v-59e6cb88>vuePress-theme-reco</a></span> <span data-v-59e6cb88><i class="iconfont reco-copyright" data-v-59e6cb88></i> <a data-v-59e6cb88><!---->
+          
+        <span data-v-59e6cb88>2013 - </span>
+        2025
+      </a></span></div></div> <div data-v-7dd95ae2><div data-v-7dd95ae2><main class="page" style="padding-right:0;"><section style="display:;"><div class="page-title"><h1 class="title">Swift 中的属性标记（Attribute）--更新中...</h1> <div data-v-8a445198><!----> <i class="iconfont reco-date" data-v-8a445198><span data-v-8a445198>12/28/2023</span></i> <!----> <i class="tags iconfont reco-tag" data-v-8a445198><span class="tag-item" data-v-8a445198>Swift</span></i></div></div> <div class="theme-reco-content content__default"><h2 id="frozen"><a href="#frozen" class="header-anchor">#</a> @frozen</h2> <p>在 Swift 中，<code>@frozen</code> 是一个属性(attribute)，它用于修饰枚举(enum)和结构体(struct)。自 Swift 5 开始，<code>@frozen</code> 属性被引入，目的是为了让库的作者可以明确表达他们的类型是否会在未来的版本中添加新的成员，而不破坏二进制兼容性(Binary Compatibility)。</p> <p>当一个枚举或结构体被标记为 <code>@frozen</code> 时，这意味着这个类型的内存布局(memory layout)是固定的，并且在未来的版本中，该类型不会添加新的成员。这允许编译器做出更多优化，因为它可以确信该类型的大小和结构在编译时是已知的，并且在未来也不会改变。</p> <p>对于枚举来说，<code>@frozen</code> 的使用非常重要，因为它影响了 switch 语句的编译方式。如果一个枚举是<code>@frozen</code> 的，编译器会要求 switch 语句覆盖所有的枚举情况(case)，因为它知道不会有新的情况被添加。如果枚举不是<code>@frozen</code> 的，编译器则会要求 switch 语句包含一个默认情况(default case)，以处理未来可能添加的新情况。</p> <p>在 Swift 的标准库中，大多数公开的枚举和结构体都是<code>@frozen</code>的，这是为了确保它们在未来的 Swift 版本中保持向后兼容性。</p> <p>举个例子，下面的代码展示了一个<code>@frozen</code>枚举：</p> <div class="language-Swift extra-class"><pre class="language-swift"><code><span class="token attribute atrule">@frozen</span> <span class="token keyword">enum</span> <span class="token class-name">Direction</span> <span class="token punctuation">{</span>
+    <span class="token keyword">case</span> north
+    <span class="token keyword">case</span> south
+    <span class="token keyword">case</span> east
+    <span class="token keyword">case</span> west
+<span class="token punctuation">}</span>
+</code></pre></div><p>这里的 Direction 枚举被标记为<code>@frozen</code>，这表示它的成员列表在未来不会改变，因此编译器可以安全地假设当它生成 switch 语句的代码时，不需要包含用于处理未来可能添加的新成员的默认情况。</p> <p>需要注意的是，<code>@frozen</code> 属性只能应用于那些你希望保持稳定 ABI(Application Binary Interface)的 public 或者 open 类型。对于内部使用的类型，或者没有公开的库类型，通常不需要使用<code>@frozen</code>，因为这些类型的更改不会影响到外部的二进制兼容性。</p> <h2 id="内联"><a href="#内联" class="header-anchor">#</a> 内联</h2> <h3 id="inlinable"><a href="#inlinable" class="header-anchor">#</a> @inlinable</h3> <p>在 Swift 中，<code>@inlinable</code> 是一个函数和方法的属性，它指示编译器可以将该函数或方法的主体内联到其他模块中。这意味着在模块的边界之外，编译器可以将函数或方法的实现直接插入到调用地点，而不是通过正常的函数调用机制。<strong>这可以提高性能，因为它减少了函数调用的开销，并且有可能使更多的优化变得可行。</strong></p> <p>使用<code>@inlinable</code>属性可以使库的作者控制哪些函数和方法的实现对外部模块可见，这样即使在库的二进制版本之间，这些函数和方法也可以被内联。这对于性能敏感的代码非常有价值，<strong>但要注意，一旦你将函数标记为 <code>@inlinable</code>，你就承诺了这部分 API 的二进制稳定性，因为外部模块可能依赖于这些具体的实现细节。</strong></p> <p>下面是一个使用 <code>@inlinable</code> 的示例：</p> <div class="language-Swift extra-class"><pre class="language-swift"><code><span class="token keyword">public</span> <span class="token keyword">struct</span> <span class="token class-name">MyStruct</span> <span class="token punctuation">{</span>
+    <span class="token keyword">public</span> <span class="token keyword">var</span> value<span class="token punctuation">:</span> <span class="token class-name">Int</span>
+
+    <span class="token attribute atrule">@inlinable</span>
+    <span class="token keyword">public</span> <span class="token keyword">func</span> <span class="token function-definition function">computeSomethingComplex</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">-&gt;</span> <span class="token class-name">Int</span> <span class="token punctuation">{</span>
+        <span class="token comment">// 复杂的计算</span>
+        <span class="token keyword">return</span> value <span class="token operator">*</span> value
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div><p>这里，computeSomethingComplex 方法被标记为<code>@inlinable</code>，这允许其他模块在调用这个方法时直接插入其实现代码，而不是通过正常的函数调用。这样做的好处是可能提高性能，但代价是减少了将来修改函数实现的灵活性，因为外部代码可能已经内联了旧的实现。</p> <p>需要注意的是，<code>@inlinable</code>属性只应该用于那些你有意公开其实现细节，并承诺在未来版本中保持二进制兼容性的公开(public)或开放(open)函数和方法。对于内部(internal)或私有(private)的函数和方法，默认情况下它们的实现是不可见的，并且编译器已经可以在同一个模块中自由内联这些函数和方法，无需<code>@inlinable</code>属性。</p> <h3 id="usablefrominline"><a href="#usablefrominline" class="header-anchor">#</a> @usableFromInline</h3> <p><code>@usableFromInline</code> 是 Swift 中的一个属性，用于修饰属性、函数、初始化器和下标等声明。这个属性的作用是允许这些被修饰的元素在其定义模块的内部是可见的，并能够被标记为<code>@inlinable</code> 的代码使用，同时在模块外部它们仍然是私有的。换句话说，<code>@usableFromInline</code> 提供了一种方式，在不将 API 公开为公共 API 的同时，让它能够被其他模块内联使用。</p> <p><code>@usableFromInline</code> 属性通常与<code>@inlinable</code> 一起使用，用于实现对某些函数或方法内部实现的内联，同时保持它们不被外部模块直接访问。这在你想优化性能而又不想泄露内部实现细节时非常有用。</p> <p>举个例子，你可能有一个内部使用的函数，这个函数是性能关键的，并且你想让它能够被其他模块内联，但不想让它成为你公共 API 的一部分：</p> <div class="language-Swift extra-class"><pre class="language-swift"><code><span class="token keyword">internal</span> <span class="token keyword">struct</span> <span class="token class-name">SomeInternalStruct</span> <span class="token punctuation">{</span>
+    <span class="token keyword">internal</span> <span class="token keyword">var</span> value<span class="token punctuation">:</span> <span class="token class-name">Int</span>
+
+    <span class="token attribute atrule">@usableFromInline</span>
+    <span class="token keyword">internal</span> <span class="token keyword">func</span> <span class="token function-definition function">criticalInternalMethod</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">-&gt;</span> <span class="token class-name">Int</span> <span class="token punctuation">{</span>
+        <span class="token comment">// 一些性能敏感的操作</span>
+        <span class="token keyword">return</span> value <span class="token operator">*</span> <span class="token number">42</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token attribute atrule">@inlinable</span>
+<span class="token keyword">public</span> <span class="token keyword">func</span> <span class="token function-definition function">publicFunctionUsingInternalMethod</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">-&gt;</span> <span class="token class-name">Int</span> <span class="token punctuation">{</span>
+    <span class="token keyword">let</span> instance <span class="token operator">=</span> <span class="token class-name">SomeInternalStruct</span><span class="token punctuation">(</span>value<span class="token punctuation">:</span> <span class="token number">10</span><span class="token punctuation">)</span>
+    <span class="token comment">// criticalInternalMethod 能够被这个公共函数内联使用，尽管它自身是 internal 的。</span>
+    <span class="token keyword">return</span> instance<span class="token punctuation">.</span><span class="token function">criticalInternalMethod</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+</code></pre></div><p>在上面的例子中，criticalInternalMethod 函数被标记为<code>@usableFromInline</code>，这意味着尽管它是内部的(internal)，它仍然可以被同一个模块中的<code>@inlinable</code> 代码内联调用，比如 publicFunctionUsingInternalMethod 函数。重要的是，criticalInternalMethod 函数对模块外部依然是不可见的，这有助于隐藏实现细节并保持二进制兼容性。</p> <p>使用<code>@usableFromInline</code> 时需要小心，因为一旦你使用了这个属性，你就在承诺该内部 API 的稳定性，因为它可以被模块内部的<code>@inlinable</code> 代码使用，并可能会影响到模块的二进制接口（ABI）。</p> <h3 id="inline、-inline-never-、-inline-always"><a href="#inline、-inline-never-、-inline-always" class="header-anchor">#</a> @inline、@inline(never)、@inline(__always)</h3> <p>在 Swift 中，<code>@inline</code> 属性用于控制编译器的内联行为，即是否将函数的实现在编译时插入到每个调用点。这个属性可以带有不同的参数，表明编译器应该如何处理内联。Swift 提供了两种主要的形式：<code>@inline(never)</code> 和 <code>@inline(__always)</code>。</p> <p><code>@inline(never)</code>：这个属性表明编译器不应该内联标记的函数，无论它被调用的上下文是什么。即使编译器认为内联能够带来性能提升，也应遵守这个属性指示不进行内联。这可以用在你不希望由于内联而失去函数调用开销的情况，或者当你认为内联可能导致代码膨胀时。</p> <div class="language-Swift extra-class"><pre class="language-swift"><code><span class="token attribute atrule">@inline</span><span class="token punctuation">(</span>never<span class="token punctuation">)</span>
+<span class="token keyword">func</span> <span class="token function-definition function">myNonInlinableFunction</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token comment">// 这个函数不会被内联到调用它的地方</span>
+<span class="token punctuation">}</span>
+</code></pre></div><p><code>@inline(__always)</code>：与<code>@inline(never)</code>相反，这个属性指示编译器应该尽可能总是内联这个函数，不管它的调用上下文。这可以用于那些非常小、经常被调用且对性能至关重要的函数，当你希望避免函数调用的额外开销时。</p> <div class="language-Swift extra-class"><pre class="language-swift"><code><span class="token attribute atrule">@inline</span><span class="token punctuation">(</span>__always<span class="token punctuation">)</span>
+<span class="token keyword">func</span> <span class="token function-definition function">myAlwaysInlinableFunction</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token comment">// 这个函数会被尽可能地内联到调用它的地方</span>
+<span class="token punctuation">}</span>
+</code></pre></div><p>需要注意的是，<code>@inline(never)</code> 和 <code>@inline(__always)</code> 都只是编译器的指示，而不是强制的命令。编译器在某些情况下可能会忽略这些指示，例如，如果函数体非常大，那么即使使用了 <code>@inline(__always)</code>，编译器也可能决定不进行内联以避免代码膨胀。或者，如果函数是递归的，即使 <code>@inline(never)</code> 也可能不会被遵守，因为内联递归函数可能会导致无限内联循环。</p> <p>总体来说，这些内联相关的属性应该谨慎使用，因为它们对编译器的优化有很强的指示作用。在大多数情况下，最好的做法是让编译器根据它的优化策略来自动决定是否内联函数。只有当你对你的代码和性能有深入了解，并且通过性能分析确认这些改变确实带来了好处时，才使用这些属性。</p></div></section> <footer class="page-edit"><!----> <!----></footer> <!----> <div class="comments-wrapper"><!----></div></main></div> <!----></div> <ul class="sub-sidebar sub-sidebar-wrapper" style="width:0;" data-v-b57cc07c data-v-7dd95ae2></ul></div></div></div><div class="global-ui"><div class="back-to-ceiling" style="right:1rem;bottom:6rem;width:2.5rem;height:2.5rem;border-radius:.25rem;line-height:2.5rem;display:none;" data-v-c6073ba8 data-v-c6073ba8><svg t="1574745035067" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="5404" class="icon" data-v-c6073ba8><path d="M526.60727968 10.90185116a27.675 27.675 0 0 0-29.21455937 0c-131.36607665 82.28402758-218.69155461 228.01873535-218.69155402 394.07834331a462.20625001 462.20625001 0 0 0 5.36959153 69.94390903c1.00431239 6.55289093-0.34802892 13.13561351-3.76865779 18.80351572-32.63518765 54.11355614-51.75690182 118.55860487-51.7569018 187.94566865a371.06718723 371.06718723 0 0 0 11.50484808 91.98906777c6.53300375 25.50556257 41.68394495 28.14064038 52.69160883 4.22606766 17.37162448-37.73630017 42.14135425-72.50938081 72.80769204-103.21549295 2.18761121 3.04276886 4.15646224 6.24463696 6.40373557 9.22774369a1871.4375 1871.4375 0 0 0 140.04691725 5.34970492 1866.36093723 1866.36093723 0 0 0 140.04691723-5.34970492c2.24727335-2.98310674 4.21612437-6.18497483 6.3937923-9.2178004 30.66633723 30.70611158 55.4360664 65.4791928 72.80769147 103.21549355 11.00766384 23.91457269 46.15860503 21.27949489 52.69160879-4.22606768a371.15156223 371.15156223 0 0 0 11.514792-91.99901164c0-69.36717486-19.13165746-133.82216804-51.75690182-187.92578088-3.42062944-5.66790279-4.76302748-12.26056868-3.76865837-18.80351632a462.20625001 462.20625001 0 0 0 5.36959269-69.943909c-0.00994388-166.08943902-87.32547796-311.81420293-218.6915546-394.09823051zM605.93803103 357.87693858a93.93749974 93.93749974 0 1 1-187.89594924 6.1e-7 93.93749974 93.93749974 0 0 1 187.89594924-6.1e-7z" p-id="5405" data-v-c6073ba8></path><path d="M429.50777625 765.63860547C429.50777625 803.39355007 466.44236686 1000.39046097 512.00932183 1000.39046097c45.56695499 0 82.4922232-197.00623328 82.5015456-234.7518555 0-37.75494459-36.9345906-68.35043303-82.4922232-68.34111062-45.57627738-0.00932239-82.52019037 30.59548842-82.51086798 68.34111062z" p-id="5406" data-v-c6073ba8></path></svg></div></div></div>
+    <script src="/assets/js/app.e1332c6f.js" defer></script><script src="/assets/js/7.63dda24d.js" defer></script><script src="/assets/js/2.4e3082d4.js" defer></script><script src="/assets/js/1.19caefda.js" defer></script><script src="/assets/js/49.58dabd69.js" defer></script>
+  </body>
+</html>

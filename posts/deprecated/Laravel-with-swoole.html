@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Swoole 从入坑到放弃 | 流光不加少</title>
+    <meta name="generator" content="VuePress 1.9.10">
+    
+    <meta name="description" content="『懒拭宝剑锋，流光不加少』">
+    
+    <link rel="preload" href="/assets/css/0.styles.8b21b8c6.css" as="style"><link rel="preload" href="/assets/js/app.e1332c6f.js" as="script"><link rel="preload" href="/assets/js/7.63dda24d.js" as="script"><link rel="preload" href="/assets/js/2.4e3082d4.js" as="script"><link rel="preload" href="/assets/js/1.19caefda.js" as="script"><link rel="preload" href="/assets/js/54.3ef9957d.js" as="script"><link rel="prefetch" href="/assets/js/10.3049d5fe.js"><link rel="prefetch" href="/assets/js/11.311b165e.js"><link rel="prefetch" href="/assets/js/15.3531b668.js"><link rel="prefetch" href="/assets/js/16.442b9ae6.js"><link rel="prefetch" href="/assets/js/17.ff64f756.js"><link rel="prefetch" href="/assets/js/18.e11ff39a.js"><link rel="prefetch" href="/assets/js/19.dd8eb796.js"><link rel="prefetch" href="/assets/js/20.510db0c8.js"><link rel="prefetch" href="/assets/js/21.b5181ba0.js"><link rel="prefetch" href="/assets/js/22.c2800a61.js"><link rel="prefetch" href="/assets/js/23.6fdb1c33.js"><link rel="prefetch" href="/assets/js/24.2ee647ad.js"><link rel="prefetch" href="/assets/js/25.1a1931ac.js"><link rel="prefetch" href="/assets/js/26.71d290ad.js"><link rel="prefetch" href="/assets/js/27.55791907.js"><link rel="prefetch" href="/assets/js/28.d31d6564.js"><link rel="prefetch" href="/assets/js/29.b3cc37a4.js"><link rel="prefetch" href="/assets/js/3.1890c0af.js"><link rel="prefetch" href="/assets/js/30.a11008d2.js"><link rel="prefetch" href="/assets/js/31.a19b3366.js"><link rel="prefetch" href="/assets/js/32.7d23a2e4.js"><link rel="prefetch" href="/assets/js/33.39f7ef57.js"><link rel="prefetch" href="/assets/js/34.7d2bcae8.js"><link rel="prefetch" href="/assets/js/35.24bdd8c8.js"><link rel="prefetch" href="/assets/js/36.02d0e20f.js"><link rel="prefetch" href="/assets/js/37.7455a7b7.js"><link rel="prefetch" href="/assets/js/38.fe6e0f92.js"><link rel="prefetch" href="/assets/js/39.7303d94e.js"><link rel="prefetch" href="/assets/js/4.fefdbce7.js"><link rel="prefetch" href="/assets/js/40.7b0ec3f8.js"><link rel="prefetch" href="/assets/js/41.82d42a6c.js"><link rel="prefetch" href="/assets/js/42.3b1a2f71.js"><link rel="prefetch" href="/assets/js/43.821ff429.js"><link rel="prefetch" href="/assets/js/44.b11f55c7.js"><link rel="prefetch" href="/assets/js/45.5c12e29e.js"><link rel="prefetch" href="/assets/js/46.60a61b4e.js"><link rel="prefetch" href="/assets/js/47.555397e8.js"><link rel="prefetch" href="/assets/js/48.83d386aa.js"><link rel="prefetch" href="/assets/js/49.58dabd69.js"><link rel="prefetch" href="/assets/js/5.af3d2f32.js"><link rel="prefetch" href="/assets/js/50.ae27c4a6.js"><link rel="prefetch" href="/assets/js/51.8396ff62.js"><link rel="prefetch" href="/assets/js/52.372771b7.js"><link rel="prefetch" href="/assets/js/53.0254393a.js"><link rel="prefetch" href="/assets/js/55.da7881ac.js"><link rel="prefetch" href="/assets/js/56.ccfb8133.js"><link rel="prefetch" href="/assets/js/57.c52b81e4.js"><link rel="prefetch" href="/assets/js/6.85087531.js"><link rel="prefetch" href="/assets/js/8.b6577bf5.js"><link rel="prefetch" href="/assets/js/9.06ceb3f0.js"><link rel="prefetch" href="/assets/js/vendors~docsearch.b4382b61.js"><link rel="prefetch" href="/assets/js/vuejs-paginate.df1ca1a8.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.8b21b8c6.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container no-sidebar" data-v-7dd95ae2><div data-v-7dd95ae2><div class="password-shadow password-wrapper-out" style="display:none;" data-v-59e6cb88 data-v-7dd95ae2 data-v-7dd95ae2><h3 class="title" data-v-59e6cb88>流光不加少</h3> <p class="description" data-v-59e6cb88>『懒拭宝剑锋，流光不加少』</p> <label id="box" class="inputBox" data-v-59e6cb88><input type="password" value="" data-v-59e6cb88> <span data-v-59e6cb88>Konck! Knock!</span> <button data-v-59e6cb88>OK</button></label> <div class="footer" data-v-59e6cb88><span data-v-59e6cb88><i class="iconfont reco-theme" data-v-59e6cb88></i> <a target="blank" href="https://vuepress-theme-reco.recoluan.com" data-v-59e6cb88>vuePress-theme-reco</a></span> <span data-v-59e6cb88><i class="iconfont reco-copyright" data-v-59e6cb88></i> <a data-v-59e6cb88><!---->
+          
+        <span data-v-59e6cb88>2013 - </span>
+        2025
+      </a></span></div></div> <div class="hide" data-v-7dd95ae2><header class="navbar" data-v-7dd95ae2><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">流光不加少</span></a> <div class="links"><div class="color-picker"><a class="color-button"><i class="iconfont reco-color"></i></a> <div class="color-picker-menu" style="display:none;"><div class="mode-options"><h4 class="title">Choose mode</h4> <ul class="color-mode-options"><li class="dark">dark</li><li class="auto active">auto</li><li class="light">light</li></ul></div></div></div> <div class="search-box"><i class="iconfont reco-search"></i> <input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/" class="nav-link"><i class="iconfont reco-home"></i>
+  Home
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont reco-category"></i>
+      Category
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/categories/Daily/" class="nav-link"><i class="undefined"></i>
+  Daily
+</a></li><li class="dropdown-item"><!----> <a href="/categories/Note/" class="nav-link"><i class="undefined"></i>
+  Note
+</a></li><li class="dropdown-item"><!----> <a href="/categories/玩具/" class="nav-link"><i class="undefined"></i>
+  玩具
+</a></li><li class="dropdown-item"><!----> <a href="/categories/笔记/" class="nav-link"><i class="undefined"></i>
+  笔记
+</a></li><li class="dropdown-item"><!----> <a href="/categories/iOS/" class="nav-link"><i class="undefined"></i>
+  iOS
+</a></li><li class="dropdown-item"><!----> <a href="/categories/App/" class="nav-link"><i class="undefined"></i>
+  App
+</a></li><li class="dropdown-item"><!----> <a href="/categories/Server/" class="nav-link"><i class="undefined"></i>
+  Server
+</a></li><li class="dropdown-item"><!----> <a href="/categories/记事/" class="nav-link"><i class="undefined"></i>
+  记事
+</a></li></ul></div></div><div class="nav-item"><a href="/tag/" class="nav-link"><i class="iconfont reco-tag"></i>
+  Tag
+</a></div><div class="nav-item"><a href="/timeline/" class="nav-link"><i class="iconfont reco-date"></i>
+  TimeLine
+</a></div><div class="nav-item"><a href="/about/" class="nav-link"><i class="iconfont reco-account"></i>
+  About
+</a></div><div class="nav-item"><a href="https://github.com/HyanCat" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="iconfont reco-github"></i>
+  GitHub
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <!----></nav></div></header> <div class="sidebar-mask" data-v-7dd95ae2></div> <aside class="sidebar" data-v-7dd95ae2><div class="personal-info-wrapper" data-v-1fad0c41 data-v-7dd95ae2><!----> <!----> <div class="num" data-v-1fad0c41><div data-v-1fad0c41><h3 data-v-1fad0c41>13</h3> <h6 data-v-1fad0c41>Articles</h6></div> <div data-v-1fad0c41><h3 data-v-1fad0c41>13</h3> <h6 data-v-1fad0c41>Tags</h6></div></div> <ul class="social-links" data-v-1fad0c41></ul> <hr data-v-1fad0c41></div> <nav class="nav-links"><div class="nav-item"><a href="/" class="nav-link"><i class="iconfont reco-home"></i>
+  Home
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont reco-category"></i>
+      Category
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/categories/Daily/" class="nav-link"><i class="undefined"></i>
+  Daily
+</a></li><li class="dropdown-item"><!----> <a href="/categories/Note/" class="nav-link"><i class="undefined"></i>
+  Note
+</a></li><li class="dropdown-item"><!----> <a href="/categories/玩具/" class="nav-link"><i class="undefined"></i>
+  玩具
+</a></li><li class="dropdown-item"><!----> <a href="/categories/笔记/" class="nav-link"><i class="undefined"></i>
+  笔记
+</a></li><li class="dropdown-item"><!----> <a href="/categories/iOS/" class="nav-link"><i class="undefined"></i>
+  iOS
+</a></li><li class="dropdown-item"><!----> <a href="/categories/App/" class="nav-link"><i class="undefined"></i>
+  App
+</a></li><li class="dropdown-item"><!----> <a href="/categories/Server/" class="nav-link"><i class="undefined"></i>
+  Server
+</a></li><li class="dropdown-item"><!----> <a href="/categories/记事/" class="nav-link"><i class="undefined"></i>
+  记事
+</a></li></ul></div></div><div class="nav-item"><a href="/tag/" class="nav-link"><i class="iconfont reco-tag"></i>
+  Tag
+</a></div><div class="nav-item"><a href="/timeline/" class="nav-link"><i class="iconfont reco-date"></i>
+  TimeLine
+</a></div><div class="nav-item"><a href="/about/" class="nav-link"><i class="iconfont reco-account"></i>
+  About
+</a></div><div class="nav-item"><a href="https://github.com/HyanCat" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="iconfont reco-github"></i>
+  GitHub
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <!----></nav> <!----> </aside> <div class="password-shadow password-wrapper-in" style="display:none;" data-v-59e6cb88 data-v-7dd95ae2><h3 class="title" data-v-59e6cb88>Swoole 从入坑到放弃</h3> <!----> <label id="box" class="inputBox" data-v-59e6cb88><input type="password" value="" data-v-59e6cb88> <span data-v-59e6cb88>Konck! Knock!</span> <button data-v-59e6cb88>OK</button></label> <div class="footer" data-v-59e6cb88><span data-v-59e6cb88><i class="iconfont reco-theme" data-v-59e6cb88></i> <a target="blank" href="https://vuepress-theme-reco.recoluan.com" data-v-59e6cb88>vuePress-theme-reco</a></span> <span data-v-59e6cb88><i class="iconfont reco-copyright" data-v-59e6cb88></i> <a data-v-59e6cb88><!---->
+          
+        <span data-v-59e6cb88>2013 - </span>
+        2025
+      </a></span></div></div> <div data-v-7dd95ae2><div data-v-7dd95ae2><main class="page" style="padding-right:0;"><section style="display:;"><div class="page-title"><h1 class="title">Swoole 从入坑到放弃</h1> <div data-v-8a445198><!----> <i class="iconfont reco-date" data-v-8a445198><span data-v-8a445198>12/31/2017</span></i> <!----> <i class="tags iconfont reco-tag" data-v-8a445198><span class="tag-item" data-v-8a445198>Laravel</span><span class="tag-item" data-v-8a445198>Swoole</span><span class="tag-item" data-v-8a445198>Docker</span></i></div></div> <div class="theme-reco-content content__default"><p>一直想用 swoole，却一直没有真正地去了解它。</p> <p>前些天看到群里有人讨论相关的技术问题，于是下定决心试一试。但是真正搞定它前后折腾了近一个星期。</p> <h3 id="起步"><a href="#起步" class="header-anchor">#</a> 起步</h3> <p>试用一下 swoole，很简单，官网的 <a href="https://wiki.swoole.com/wiki/page/p-server.html" target="_blank" rel="noopener noreferrer">swoole server 例子<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></p> <p>本地环境 ab 测一下：</p> <p><img src="https://pico.oss-cn-hangzhou.aliyuncs.com/blog/2mq13.jpg" alt="ab"></p> <p>简直惊叹！当然官方的压测数据更详细和准确： <a href="https://wiki.swoole.com/wiki/page/62.html" target="_blank" rel="noopener noreferrer">压力测试<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></p> <h3 id="laravel-结合"><a href="#laravel-结合" class="header-anchor">#</a> Laravel 结合</h3> <p>Swoole 虽强，但是还是要能和项目结合好才算能用。</p> <p>调研了几个 laravel 的 swoole 库之后，选择了 <a href="https://github.com/huang-yi/laravel-swoole-http" target="_blank" rel="noopener noreferrer">huang-yi/laravel-swoole-http<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a>，他对 swoole 的封装实现比较好。当然他只实现了 http server，目前也是足够了。</p> <p>如果项目比较简单，基于 Laravel 并且没有太多的修改，那么可能 1 个小时就能立竿见影了。但是项目复杂了就折腾起来没完了。</p> <p>研究了下实现的源码，原理还比较简单，和 <code>artisan serve</code> 差不多。</p> <ol><li>管理 swoole <code>start</code> <code>stop</code> 等几个命令；</li> <li>启动 Laravel Application；</li> <li>监听 swoole http server 的 request 等几个事件；</li> <li>将数据传给 Laravel 的 <code>request</code>，并将 Laravel 的 <code>response</code> 传出来。</li></ol> <h3 id="docker-结合"><a href="#docker-结合" class="header-anchor">#</a> Docker 结合</h3> <p>自从用了 docker，什么东西都想 docker 化。项目也一直运行在 docker 环境下好几年了。所以必须把 swoole 在 docker 里跑起来。</p> <p>定制一个 swoole 的 docker 容器倒也简单，<a href="https://github.com/ruogoo/docker-env/blob/develop/swoole/Dockerfile" target="_blank" rel="noopener noreferrer">Dockerfile<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a>
+把该装的装上。</p> <p>docker-compose.yml 里多一条 command:</p> <div class="language-dockerfile extra-class"><pre class="language-dockerfile"><code>  swoole:
+    build: ./swoole
+    <span class="token comment"># ...</span>
+    command: php /docker/app/someproject/artisan swoole:http start
+</code></pre></div><p>稍麻烦的是 Nginx 的配置，不再是 fastcgi 的方式，而是反向代理到 swoole 的 http server，简单配置示例如下：</p> <div class="language- extra-class"><pre class="language-text"><code># laravel swoole config example.
+server {
+    listen 80;
+    server_name swoole.app;
+
+    access_log  /var/log/nginx/host.access.log  main;
+
+    root  /docker/app/someproject/public;
+    index index.php;
+
+    location / {
+        try_files $uri $uri/ @swoole;
+    }
+
+    # 由于 http server 支持不完善，需要传递 header
+    proxy_set_header   HOST $host;
+    proxy_set_header   SERVER_PORT $server_port;
+    proxy_set_header   REMOTE_ADDR $remote_addr;
+    proxy_set_header   X-Real-IP $remote_addr;
+    proxy_set_header   X-Forwarded-For $proxy_add_x_forwarded_for;
+    proxy_http_version 1.1;
+
+    # 这里注意：如果是无路径的 URL，需要加 /
+    location = /index.php {
+        proxy_pass http://swoole:1215/;
+    }
+
+    location @swoole {
+        proxy_pass http://swoole:1215;
+    }
+
+    location ~ /\.ht {
+        deny    all;
+    }
+}
+</code></pre></div><h3 id="坑"><a href="#坑" class="header-anchor">#</a> 坑</h3> <ol><li><p>Docker 端口容易混乱</p> <p>这个坑算自己的失误，要管理的容器太多了，端口映射就乱了。项目里配置的端口，Dockerfile 里开放的端口，docker-compose 里映射的端口，以及 Nginx 里反向代理的端口，都要对应得上（不需要一样），很容易混乱，导致调了很久还是 502。</p></li> <li><p>Nginx 配置</p> <p>Nginx 的配置需要揣摩每一项的意思，并思考还缺少什么，分析请求到达 Nginx 之后是如何转给 swoole 的。很多次访问静态文件是可以，但访问 php 页面就 502 了。这里调了很久很久。</p></li> <li><p>require_once 大坑货</p> <p>Nginx 配置好了，不再 502 了，却一直是 404 了。开始找了很久都没找到原因，一直以为是缺少了什么，导致请求没有找到目标。但是后来一想，Laravel 的 Application 也启动了，那 404 肯定就是 Laravel 内部抛出来的。然后就一点点 log 调试（好吧，当时好像不知道为什么不能看错误栈），终于发现是 route 丢了。</p> <p>什么，丢了？</p> <p>对，就是本来所有的 route 都加载进去了，但是又丢了。就是在 swoole onRequest 的时候，会 reset 并重新加载一些 ServiceProvider (待考究)。</p> <p>PHP 对于引入代码文件一般用 <code>require_once</code> 避免重复 require，比如我的 RouteServiceProvider 中需要 require 路由文件：</p> <div class="language-php extra-class"><pre class="language-php"><code><span class="token keyword">class</span> <span class="token class-name-definition class-name">RouteServiceProvider</span> <span class="token keyword">extends</span> <span class="token class-name">ServiceProvider</span>
+<span class="token punctuation">{</span>
+    <span class="token comment">/**
+     * `map()` called by parent's `loadRoutes()`.
+     */</span>
+    <span class="token keyword">public</span> <span class="token keyword">function</span> <span class="token function-definition function">map</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+    <span class="token punctuation">{</span>
+        <span class="token keyword">require_once</span> <span class="token function">base_path</span><span class="token punctuation">(</span><span class="token string single-quoted-string">'route/web.php'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">require_once</span> <span class="token function">base_path</span><span class="token punctuation">(</span><span class="token string single-quoted-string">'route/passport.php'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">require_once</span> <span class="token function">base_path</span><span class="token punctuation">(</span><span class="token string single-quoted-string">'route/api_v3.php'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div><p>就在这里，路由文件是 <code>require_once</code> 的，加载一次后就不再被加载了，swoole 启动后实际的路由被清空了，改成 <code>require</code> 就好了。。。</p></li> <li><p>上线后才发现的一个大坑：共享单例</p> <p>之前知道会有这个问题，但一时忽略了，没有重视，上线后才发现并意识到，赶紧回滚。。</p> <p>Laravel 的容器里有很多单例，比如 Auth、Session、View 等。使用 phpfpm 等 fastcgi 方式的话，任何两个请求互不相干，单例的生命周期只在 response 之后就结束。而使用 swoole 之后，应用程序是先加载到内存中，单例是一直活跃的，前后两个请求用到的单例对象就是同一个。会出现 session 串了的问题。解决办法是 onRequest 的时候 reset 这些单例，重新 new 一个出来。</p> <p>好吧，我试图改了很多地方，还是有问题。</p> <p>于是，暂时放弃。慢慢研究。🤪</p></li></ol></div></section> <footer class="page-edit"><!----> <!----></footer> <!----> <div class="comments-wrapper"><!----></div></main></div> <!----></div> <ul class="sub-sidebar sub-sidebar-wrapper" style="width:0;" data-v-b57cc07c data-v-7dd95ae2></ul></div></div></div><div class="global-ui"><div class="back-to-ceiling" style="right:1rem;bottom:6rem;width:2.5rem;height:2.5rem;border-radius:.25rem;line-height:2.5rem;display:none;" data-v-c6073ba8 data-v-c6073ba8><svg t="1574745035067" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="5404" class="icon" data-v-c6073ba8><path d="M526.60727968 10.90185116a27.675 27.675 0 0 0-29.21455937 0c-131.36607665 82.28402758-218.69155461 228.01873535-218.69155402 394.07834331a462.20625001 462.20625001 0 0 0 5.36959153 69.94390903c1.00431239 6.55289093-0.34802892 13.13561351-3.76865779 18.80351572-32.63518765 54.11355614-51.75690182 118.55860487-51.7569018 187.94566865a371.06718723 371.06718723 0 0 0 11.50484808 91.98906777c6.53300375 25.50556257 41.68394495 28.14064038 52.69160883 4.22606766 17.37162448-37.73630017 42.14135425-72.50938081 72.80769204-103.21549295 2.18761121 3.04276886 4.15646224 6.24463696 6.40373557 9.22774369a1871.4375 1871.4375 0 0 0 140.04691725 5.34970492 1866.36093723 1866.36093723 0 0 0 140.04691723-5.34970492c2.24727335-2.98310674 4.21612437-6.18497483 6.3937923-9.2178004 30.66633723 30.70611158 55.4360664 65.4791928 72.80769147 103.21549355 11.00766384 23.91457269 46.15860503 21.27949489 52.69160879-4.22606768a371.15156223 371.15156223 0 0 0 11.514792-91.99901164c0-69.36717486-19.13165746-133.82216804-51.75690182-187.92578088-3.42062944-5.66790279-4.76302748-12.26056868-3.76865837-18.80351632a462.20625001 462.20625001 0 0 0 5.36959269-69.943909c-0.00994388-166.08943902-87.32547796-311.81420293-218.6915546-394.09823051zM605.93803103 357.87693858a93.93749974 93.93749974 0 1 1-187.89594924 6.1e-7 93.93749974 93.93749974 0 0 1 187.89594924-6.1e-7z" p-id="5405" data-v-c6073ba8></path><path d="M429.50777625 765.63860547C429.50777625 803.39355007 466.44236686 1000.39046097 512.00932183 1000.39046097c45.56695499 0 82.4922232-197.00623328 82.5015456-234.7518555 0-37.75494459-36.9345906-68.35043303-82.4922232-68.34111062-45.57627738-0.00932239-82.52019037 30.59548842-82.51086798 68.34111062z" p-id="5406" data-v-c6073ba8></path></svg></div></div></div>
+    <script src="/assets/js/app.e1332c6f.js" defer></script><script src="/assets/js/7.63dda24d.js" defer></script><script src="/assets/js/2.4e3082d4.js" defer></script><script src="/assets/js/1.19caefda.js" defer></script><script src="/assets/js/54.3ef9957d.js" defer></script>
+  </body>
+</html>
